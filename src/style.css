@@ -1,0 +1,74 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #607d8b;
+  font-family: "verdana";
+}
+
+.wrapper {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+h1 {
+  color: #0c1c27;
+}
+
+.guessboard {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.guessboard::after {
+  content: "";
+  position: absolute;
+  clear: both;
+  display: table;
+}
+
+.card {
+  cursor: pointer;
+  float: left;
+  height: 90px;
+  margin: 0 5px 5px 0;
+  width: 90px;
+  font-size: 72px;
+  background: #eaeaea;
+  line-height: 69px;
+  text-align: center;
+}
+
+.card.x {
+  background: #f44336;
+  box-shadow: 2px 2px 0 1px #c71f13;
+  color: #fff;
+}
+
+.card.o {
+  background: #4caf50;
+  box-shadow: 2px 2px 0 1px #8bc34a;
+  color: #fff;
+}
+
+.card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.winner {
+  font-size: 35px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.winner span {
+  display: block;
+  font-size: 72px;
+  color: #9e9e9e;
+  text-shadow: 1px 1px 0 #ffffff;
+}
